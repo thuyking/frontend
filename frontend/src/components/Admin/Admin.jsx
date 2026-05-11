@@ -13,7 +13,7 @@ const Admin = () => {
           onClick={() => setIsSideOpen(!isSideOpen)}
           className="text-white mr-3"
         >
-          <FiMenu size={24} />
+          <FiMenu sizes={24} />
         </button>
         <h1 className="text-white text-[15px] font-bold">Admin</h1>
       </div>

@@ -14,7 +14,7 @@ const CartItem = () => {
       await updateMutation.mutateAsync({
         productId: item.productId,
         quantity,
-        size: item.size,
+        sizes: item.sizes,
         color: item.color,
       });
     } catch (error) {
@@ -26,7 +26,7 @@ const CartItem = () => {
     try {
       await removeMutation.mutateAsync({
         productId: item.productId,
-        size: item.size,
+        sizes: item.sizes,
         color: item.color,
       });
     } catch (error) {
@@ -42,7 +42,7 @@ const CartItem = () => {
           <div className="flex flex-col pr-16">
             <h2 className="font-semibold">{cartItem.name}</h2>
             <p className="text-[13px] text-gray-500">
-              size: {cartItem.size} | color: {cartItem.color}
+              sizes: {cartItem.sizes} | color: {cartItem.color}
             </p>
             <div className="flex flex-row gap-4 items-center">
               <button

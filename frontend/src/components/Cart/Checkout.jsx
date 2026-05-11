@@ -29,7 +29,7 @@ const Checkout = () => {
         name: item.name,
         image: item.image,
         price: item.price,
-        size: item.size,
+        sizes: item.sizes,
         color: item.color,
         quantity: item.quantity,
       })),
@@ -67,7 +67,7 @@ const Checkout = () => {
         checkoutId,
         payload: {
           paymentStatus: "paid",
-          paymentDetails: details,
+          paymentDetails: details,  
         },
       });
       const finalOrder = await finalizeCheckoutMutation.mutateAsync(checkoutId);
@@ -170,7 +170,7 @@ const Checkout = () => {
               <img src={product.image} alt="" className="w-16 h-16 object-cover" />
               <div className="flex-1 text-sm">
                 <p className="font-medium">{product.name}</p>
-                <p>Size: {product.size}</p>
+                <p>Size: {product.sizes}</p>
                 <p>Color: {product.color}</p>
               </div>
               <p className="font-medium">${product.price}</p>

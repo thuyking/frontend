@@ -11,6 +11,7 @@ const uploadRouter = require("./routes/UploadRouter");
 const AdminUser = require("./routes/AdminUser");
 const AdminProduct = require("./routes/AdminProduct");
 const AdminOrder = require("./routes/AdminOrder");
+const paypalRoutes = require("./routes/paypalRoutes");
 const app = express();
 app.use(express.json());
 app.use(cors());
@@ -38,6 +39,9 @@ app.use("/api/upload", uploadRouter);
 app.use("/api/admin/users", AdminUser);
 app.use("/api/admin/products", AdminProduct);
 app.use("/api/admin/orders", AdminOrder);
+
+// PayPal
+app.use("/api/payments/paypal", paypalRoutes);
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });

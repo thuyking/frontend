@@ -17,7 +17,7 @@ const getCart = async (userId, guestId) => {
 
 // Create Cart API
 router.post("/", async (req, res) => {
-  const { productId, quantity, size, color, guestId, userId } = req.body;
+  const { productId, quantity, sizes, color, guestId, userId } = req.body;
   try {
     const product = await Product.findById(productId);
     if (!product) return res.status(404).json({ message: "Product not found" });
@@ -30,7 +30,7 @@ router.post("/", async (req, res) => {
       const productIndex = cart.products.findIndex((p) => {
         return (
           p.productId.toString() === productId &&
-          p.size === size &&
+          p.sizes === sizes &&
           p.color === color
         );
       });
@@ -43,7 +43,7 @@ router.post("/", async (req, res) => {
           name: product.name,
           image: product.images[0].url,
           price: product.price,
-          size,
+          sizes,
           color,
           quantity,
         });
@@ -66,7 +66,7 @@ router.post("/", async (req, res) => {
             name: product.name,
             image: product.images[0].url,
             price: product.price,
-            size,
+            sizes,
             color,
             quantity,
           },
@@ -83,7 +83,7 @@ router.post("/", async (req, res) => {
 
 // Update product quantity in the cart
 router.put("/", async (req, res) => {
-  const { productId, quantity, size, color, guestId, userId } = req.body;
+  const { productId, quantity, sizes, color, guestId, userId } = req.body;
   try {
     let cart = await getCart(userId, guestId);
 
@@ -92,7 +92,7 @@ router.put("/", async (req, res) => {
     const productIndex = cart.products.findIndex(
       (p) =>
         p.productId.toString() === productId &&
-        p.size === size &&
+        p.sizes === sizes &&
         p.color === color,
     );
 
@@ -119,7 +119,7 @@ router.put("/", async (req, res) => {
 });
 // Delete the product form the cart
 router.delete("/", async (req, res) => {
-  const { productId, size, color, guestId, userId } = req.body;
+  const { productId, sizes, color, guestId, userId } = req.body;
   try {
     let cart = await getCart(userId, guestId);
 
@@ -128,7 +128,7 @@ router.delete("/", async (req, res) => {
     const productIndex = cart.products.findIndex(
       (p) =>
         p.productId.toString() === productId &&
-        p.size === size &&
+        p.sizes === sizes &&
         p.color === color,
     );
 
@@ -185,7 +185,7 @@ router.post("/merge", protect, async (req, res) => {
           const productIndex = userCart.products.findIndex(
             (item) =>
               item.productId.toString() === guestItem.productId.toString() &&
-              item.size === guestItem.size &&
+              item.sizes === guestItem.sizes &&
               item.color === guestItem.color,
           );
 
