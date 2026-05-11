@@ -4,12 +4,15 @@ import { toast } from "sonner";
 import { useProductDetail } from "../../hooks/useProducts";
 import { useUpdateAdminProduct } from "../../hooks/useAdminProducts";
 import { resolveImageUrl } from "../../lib/imageUrl";
+import { uploadImageApi } from "../../api/uploadApi";
 
 const EditProductPage = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const { data: product } = useProductDetail(id);
   const updateMutation = useUpdateAdminProduct();
+  const [selectedImageFile, setSelectedImageFile] = useState(null);
+  const [isUploadingImage, setIsUploadingImage] = useState(false);
 
   const [productData, setProductData] = useState({
     name: "",
@@ -63,6 +66,28 @@ const EditProductPage = () => {
       navigate("/admin/products");
     } catch (error) {
       toast.error(error?.response?.data?.message || "Failed to update product");
+    }
+  }
+
+  async function handleUploadImage() {
+    if (!selectedImageFile) {
+      toast.error("Please choose an image first");
+      return;
+    }
+
+    try {
+      setIsUploadingImage(true);
+      const result = await uploadImageApi(selectedImageFile);
+      setProductData((prev) => ({
+        ...prev,
+        images: [...prev.images, { url: result.imageUrl }],
+      }));
+      setSelectedImageFile(null);
+      toast.success("Image uploaded");
+    } catch (error) {
+      toast.error(error?.response?.data?.message || "Failed to upload image");
+    } finally {
+      setIsUploadingImage(false);
     }
   }
 
@@ -143,6 +168,21 @@ const EditProductPage = () => {
 
         <div>
           <label className="block mb-1 font-medium">Image</label>
+          <div className="flex items-center gap-2 mb-3">
+            <input
+              type="file"
+              accept="image/*"
+              onChange={(e) => setSelectedImageFile(e.target.files?.[0] || null)}
+            />
+            <button
+              type="button"
+              onClick={handleUploadImage}
+              disabled={isUploadingImage}
+              className="bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded disabled:opacity-60"
+            >
+              {isUploadingImage ? "Uploading..." : "Upload"}
+            </button>
+          </div>
           <div className="flex gap-3">
             {productData.images.map((image, index) => (
               <img key={index} src={resolveImageUrl(image.url)} className="w-20 h-20 object-cover rounded border" />
