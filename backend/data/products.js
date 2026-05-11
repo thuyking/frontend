@@ -18,13 +18,10 @@ const products = [
     gender: "Men",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=39",
+        url: "https://res.cloudinary.com/ddiwrumsi/image/upload/v1778506580/irky1gsyqa6yjjtugufj.avif",
         altText: "Classic Oxford Button-Down Shirt Front View",
       },
-      {
-        url: "https://picsum.photos/500/500?random=40",
-        altText: "Classic Oxford Button-Down Shirt Back View",
-      },
+
     ],
     rating: 4.5,
     numReviews: 12,
@@ -46,13 +43,10 @@ const products = [
     gender: "Men",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=41",
+        url: "https://res.cloudinary.com/ddiwrumsi/image/upload/v1778508158/dxz6cujisudvwoeuurbu.webp",
         altText: "Slim-Fit Stretch Shirt Front View",
       },
-      {
-        url: "https://picsum.photos/500/500?random=42",
-        altText: "Slim-Fit Stretch Shirt Back View",
-      },
+
     ],
     rating: 4.8,
     numReviews: 15,
@@ -74,13 +68,10 @@ const products = [
     gender: "Men",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=43",
+        url: "https://res.cloudinary.com/ddiwrumsi/image/upload/v1778508482/fm5rjveqvnygbrwzjzj4.jpg",
         altText: "Casual Denim Shirt Front View",
       },
-      {
-        url: "https://picsum.photos/500/500?random=44",
-        altText: "Casual Denim Shirt Back View",
-      },
+
     ],
     rating: 4.6,
     numReviews: 8,
@@ -102,13 +93,10 @@ const products = [
     gender: "Men",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=45",
+        url: "https://res.cloudinary.com/ddiwrumsi/image/upload/v1778508566/gvm1azg2hwe07tadl8g8.jpg",
         altText: "Printed Resort Shirt Front View",
       },
-      {
-        url: "https://picsum.photos/500/500?random=1",
-        altText: "Printed Resort Shirt Back View",
-      },
+
     ],
     rating: 4.4,
     numReviews: 10,
@@ -130,13 +118,10 @@ const products = [
     gender: "Men",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=47",
+        url: "https://res.cloudinary.com/ddiwrumsi/image/upload/v1778508737/lkacffzvmi2q2gslotvb.jpg",
         altText: "Slim-Fit Easy-Iron Shirt Front View",
       },
-      {
-        url: "https://picsum.photos/500/500?random=2",
-        altText: "Slim-Fit Easy-Iron Shirt Front View",
-      },
+
     ],
     rating: 5,
     numReviews: 14,
@@ -158,13 +143,11 @@ const products = [
     gender: "Men",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=3",
+        url: "https://res.cloudinary.com/ddiwrumsi/image/upload/v1778508871/nvywjloy5nedamjmtcbc.webp"
+        ,
         altText: "Polo T-Shirt Front View",
       },
-      {
-        url: "https://picsum.photos/500/500?random=4",
-        altText: "Polo T-Shirt Back View",
-      },
+
     ],
     rating: 4.3,
     numReviews: 22,
@@ -186,7 +169,7 @@ const products = [
     gender: "Men",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=5",
+        url: "https://res.cloudinary.com/ddiwrumsi/image/upload/v1778509009/k4dv8c5oyac8m4ubivbo.jpg",
         altText: "Oversized Graphic T-Shirt Front View",
       },
     ],
@@ -210,7 +193,7 @@ const products = [
     gender: "Men",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=6",
+        url: "https://res.cloudinary.com/ddiwrumsi/image/upload/v1778509079/b56huyelf5pfe26y74xa.jpg",
         altText: "Regular-Fit Henley Shirt Front View",
       },
     ],
@@ -234,7 +217,7 @@ const products = [
     gender: "Men",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=7",
+        url: "https://res.cloudinary.com/ddiwrumsi/image/upload/v1778509160/bmjyq5ytsgum7diyglqc.jpg",
         altText: "Long-Sleeve Thermal Tee Front View",
       },
     ],
@@ -258,7 +241,7 @@ const products = [
     gender: "Men",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=8",
+        url: "https://res.cloudinary.com/ddiwrumsi/image/upload/v1778509234/opamnp9bvqywg3oucfkf.jpg",
         altText: "V-Neck Classic T-Shirt Front View",
       },
     ],
@@ -282,7 +265,8 @@ const products = [
     gender: "Men",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=9",
+        url: "https://res.cloudinary.com/ddiwrumsi/image/upload/v1778509728/j2vef7kligrojvyssany.webp"
+        ,
         altText: "Slim Fit Joggers Front View",
       },
     ],
@@ -306,7 +290,8 @@ const products = [
     gender: "Men",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=10",
+        url: "https://res.cloudinary.com/ddiwrumsi/image/upload/v1778509795/gy9nqvejzggdnnedlpxy.webp"
+        ,
         altText: "Cargo Joggers Front View",
       },
     ],
@@ -330,7 +315,8 @@ const products = [
     gender: "Men",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=11",
+        url: "https://res.cloudinary.com/ddiwrumsi/image/upload/v1778509976/iwywcjv9jhqqgxmpamsg.jpg"
+        ,
         altText: "Tapered Sweatpants Front View",
       },
     ],
@@ -354,7 +340,8 @@ const products = [
     gender: "Men",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=12",
+        url: "https://res.cloudinary.com/ddiwrumsi/image/upload/v1778510060/dtyu3hxkzeqziivsgmoq.webp"
+        ,
         altText: "Denim Jeans Front View",
       },
     ],
@@ -378,7 +365,8 @@ const products = [
     gender: "Men",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=13",
+        url: "https://res.cloudinary.com/ddiwrumsi/image/upload/v1778510337/pl0gjcrztgclkbcegqqs.jpg"
+        ,
         altText: "Chino Pants Front View",
       },
     ],
@@ -402,7 +390,8 @@ const products = [
     gender: "Men",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=14",
+        url: "https://res.cloudinary.com/ddiwrumsi/image/upload/v1778510429/jmr4zfj6uvg33nhbcbkq.jpg"
+        ,
         altText: "Track Pants Front View",
       },
     ],
@@ -426,7 +415,8 @@ const products = [
     gender: "Men",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=15",
+        url: "https://res.cloudinary.com/ddiwrumsi/image/upload/v1778510518/ktgakrulbvlaeabxgedw.jpg"
+        ,
         altText: "Slim Fit Trousers Front View",
       },
     ],
@@ -450,7 +440,8 @@ const products = [
     gender: "Men",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=16",
+        url: "https://res.cloudinary.com/ddiwrumsi/image/upload/v1778510616/r3sdk08af6cvgqsbbq50.webp"
+        ,
         altText: "Cargo Pants Front View",
       },
     ],
@@ -474,7 +465,8 @@ const products = [
     gender: "Men",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=17",
+        url: "https://res.cloudinary.com/ddiwrumsi/image/upload/v1778510701/d412okua6oheiuxobzlj.webp"
+        ,
         altText: "Relaxed Fit Sweatpants Front View",
       },
     ],
@@ -498,7 +490,8 @@ const products = [
     gender: "Men",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=18",
+        url: "https://res.cloudinary.com/ddiwrumsi/image/upload/v1778510771/wthlqm2nuu9usaraqapr.jpg"
+        ,
         altText: "Formal Dress Pants Front View",
       },
     ],
@@ -522,7 +515,7 @@ const products = [
     gender: "Women",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=19",
+        url: "https://res.cloudinary.com/ddiwrumsi/image/upload/v1778511371/fzwko4hlwvvrh1uwnamu.jpg",
         altText: "High-Waist Skinny Jeans",
       },
     ],
@@ -546,7 +539,8 @@ const products = [
     gender: "Women",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=20",
+        url: "https://res.cloudinary.com/ddiwrumsi/image/upload/v1778511494/bvxmmj0omlz7uelarrha.jpg"
+        ,
         altText: "Wide-Leg Trousers Front View",
       },
     ],
@@ -570,7 +564,8 @@ const products = [
     gender: "Women",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=21",
+        url: "https://res.cloudinary.com/ddiwrumsi/image/upload/v1778511565/qqjewepq5yougt4n0gzx.webp"
+        ,
         altText: "Stretch Leggings Front View",
       },
     ],
@@ -594,7 +589,8 @@ const products = [
     gender: "Women",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=22",
+        url: "https://res.cloudinary.com/ddiwrumsi/image/upload/v1778511645/ouub8q5vnslokf1iyj4z.webp"
+        ,
         altText: "Pleated Midi Skirt Front View",
       },
     ],
@@ -618,7 +614,8 @@ const products = [
     gender: "Women",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=23",
+        url: "https://res.cloudinary.com/ddiwrumsi/image/upload/v1778512065/pqx8rky1dkj2tvbir2gn.webp"
+        ,
         altText: "Flared Palazzo Pants Front View",
       },
     ],
@@ -642,7 +639,8 @@ const products = [
     gender: "Women",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=24",
+        url: "https://res.cloudinary.com/ddiwrumsi/image/upload/v1778512436/jk9qo80u1fbl6r2epb76.webp"
+        ,
         altText: "High-Rise Joggers Front View",
       },
     ],
@@ -666,7 +664,8 @@ const products = [
     gender: "Women",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=25",
+        url: "https://res.cloudinary.com/ddiwrumsi/image/upload/v1778512524/gbwwms6cml8qxi7lwtm4.webp"
+        ,
         altText: "Paperbag Waist Shorts Front View",
       },
     ],
@@ -690,7 +689,7 @@ const products = [
     gender: "Women",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=26",
+        url: "https://res.cloudinary.com/ddiwrumsi/image/upload/v1778512590/vgn1waycgyti3fpfjpyl.webp",
         altText: "Stretch Denim Shorts Front View",
       },
     ],
@@ -714,7 +713,7 @@ const products = [
     gender: "Women",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=27",
+        url: "https://res.cloudinary.com/ddiwrumsi/image/upload/v1778512723/upcmwgajyqvftlkxwztc.webp",
         altText: "Culottes Front View",
       },
     ],
@@ -738,7 +737,7 @@ const products = [
     gender: "Women",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=28",
+        url: "https://res.cloudinary.com/ddiwrumsi/image/upload/v1778513643/iyovnlvlx8agzfty0jjp.jpg",
         altText: "Classic Pleated Trousers Front View",
       },
     ],
@@ -762,7 +761,8 @@ const products = [
     gender: "Women",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=29",
+        url: "https://res.cloudinary.com/ddiwrumsi/image/upload/v1778513725/v7ndolnxilssejcavrat.webp"
+        ,
         altText: "Knitted Cropped Top",
       },
     ],
@@ -786,7 +786,8 @@ const products = [
     gender: "Women",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=30",
+        url: "https://res.cloudinary.com/ddiwrumsi/image/upload/v1778513802/stuslucdeykw1mqyozqy.webp"
+        ,
         altText: "Boho Floral Blouse",
       },
     ],
@@ -810,7 +811,8 @@ const products = [
     gender: "Women",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=31",
+        url: "https://res.cloudinary.com/ddiwrumsi/image/upload/v1778513902/i0grslnqn0tcfckqtxm6.webp"
+        ,
         altText: "Casual T-Shirt",
       },
     ],
@@ -834,7 +836,8 @@ const products = [
     gender: "Women",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=32",
+        url: "https://res.cloudinary.com/ddiwrumsi/image/upload/v1778513984/oqlxxwim02g2fvqbpscs.webp"
+        ,
         altText: "Off-Shoulder Top",
       },
     ],
@@ -858,7 +861,8 @@ const products = [
     gender: "Women",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=33",
+        url: "https://res.cloudinary.com/ddiwrumsi/image/upload/v1778514046/u5dcvrclwzjqabuv3pth.jpg"
+        ,
         altText: "Lace-Trimmed Cami Top",
       },
     ],
@@ -882,7 +886,8 @@ const products = [
     gender: "Women",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=34",
+        url: "https://res.cloudinary.com/ddiwrumsi/image/upload/v1778514122/fpxstjw66ygj1hhk2paq.webp"
+        ,
         altText: "Graphic Print Tee",
       },
     ],
@@ -906,7 +911,8 @@ const products = [
     gender: "Women",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=35",
+        url: "https://res.cloudinary.com/ddiwrumsi/image/upload/v1778514210/viizjfzclgyalbwvjaiq.webp"
+        ,
         altText: "Ribbed Long-Sleeve Top",
       },
     ],
@@ -930,7 +936,8 @@ const products = [
     gender: "Women",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=36",
+        url: "https://res.cloudinary.com/ddiwrumsi/image/upload/v1778514287/jpjgboycpl4ozfug1nd6.webp"
+        ,
         altText: "Ruffle-Sleeve Blouse",
       },
     ],
@@ -954,7 +961,8 @@ const products = [
     gender: "Women",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=37",
+        url: "https://res.cloudinary.com/ddiwrumsi/image/upload/v1778514361/rsguop0g1pvwaxvd9gw8.jpg"
+        ,
         altText: "Classic Button-Up Shirt",
       },
     ],
@@ -978,7 +986,8 @@ const products = [
     gender: "Women",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=38",
+        url: "https://res.cloudinary.com/ddiwrumsi/image/upload/v1778514428/qknypnyjt2hzp8a4eksf.webp"
+        ,
         altText: "V-Neck Wrap Top",
       },
     ],
