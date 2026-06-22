@@ -1,22 +1,19 @@
 import React from "react";
-import axios from "axios";
 import { PayPalButtons, PayPalScriptProvider } from "@paypal/react-paypal-js";
+import { apiClient } from "../../lib/apiClient";
 
 const PayPalButton = ({ amount, onSuccess, onError }) => {
   async function createPaypalOrder() {
-    const response = await axios.post(
-      "http://localhost:3000/api/payments/paypal/create-order",
-      {
-        amount,
-      }
-    );
+    const response = await apiClient.post("/payments/paypal/create-order", {
+      amount,
+    });
 
     return response.data.id;
   }
 
   async function capturePaypalOrder(orderID) {
-    const response = await axios.post(
-      `http://localhost:3000/api/payments/paypal/${orderID}/capture`
+    const response = await apiClient.post(
+      `/payments/paypal/${orderID}/capture`
     );
 
     return response.data;
@@ -51,3 +48,4 @@ const PayPalButton = ({ amount, onSuccess, onError }) => {
 };
 
 export default PayPalButton;
+ 
