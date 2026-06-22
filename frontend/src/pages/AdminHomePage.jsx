@@ -69,7 +69,7 @@ const AdminHomePage = () => {
                     className="border-b hover:bg-gray-50 text-sm"
                   >
                     <td className="p-3">{order._id}</td>
-                    <td className="p-3">{order?.user?.name }</td>
+                    <td className="p-3">{order?.user || "Unknow" }</td>
                     <td className="p-3">${order.totalPrice}</td>
                     <td className="p-3 text-gray-600">{order.status}</td>
                   </tr>
