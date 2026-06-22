@@ -8,6 +8,12 @@ import {
 
 const ORDER_STATUSES = ["Processing", "Shipped", "Delivered", "Cancelled"];
 
+function getCustomerLabel(user) {
+  if (!user) return "Unknown";
+  if (typeof user === "string") return `#${user.slice(-8)}`;
+  return user.name || user.email || `#${user._id?.slice(-8) || "Unknown"}`;
+}
+
 const OrderManager = () => {
   const { data: orders = [], isLoading, isError, error } = useAdminOrders();
   const updateOrderMutation = useUpdateAdminOrder();
@@ -57,14 +63,15 @@ const OrderManager = () => {
     <div className="p-6 bg-gray-100 min-h-screen">
       <h2 className="text-3xl font-bold mb-6">Order Management</h2>
 
-      <div className="bg-white rounded-lg shadow overflow-hidden">
-        <table className="w-full border-collapse">
+      <div className="bg-white rounded-lg shadow overflow-x-auto">
+        <table className="w-full min-w-[820px] table-fixed border-collapse">
           <thead className="bg-gray-100 text-gray-600 text-sm uppercase">
             <tr>
-              <th className="text-left px-6 py-4">Order Id</th>
-              <th className="text-left px-6 py-4">Total Price</th>
-              <th className="text-left px-6 py-4">Status</th>
-              <th className="text-left px-6 py-4">Actions</th>
+              <th className="w-[34%] text-left px-6 py-4">Order Id</th>
+              <th className="w-[18%] text-left px-6 py-4">Customer</th>
+              <th className="w-[16%] text-left px-6 py-4">Total Price</th>
+              <th className="w-[18%] text-left px-6 py-4">Status</th>
+              <th className="w-[14%] text-left px-6 py-4">Actions</th>
             </tr>
           </thead>
 
@@ -75,15 +82,15 @@ const OrderManager = () => {
                   key={order._id}
                   className="border-t border-gray-200"
                 >
-                  <td className="px-6 py-5 text-gray-700 font-medium">
+                  <td className="px-6 py-5 text-gray-700 font-medium truncate">
                     #{order._id}
                   </td>
 
-                  <td className="px-6 py-5 text-gray-600">
-                    {order.user.name}
+                  <td className="px-6 py-5 text-gray-600 truncate">
+                    {getCustomerLabel(order.user)}
                   </td>
 
-                  <td className="px-6 py-5 text-gray-600">
+                  <td className="px-6 py-5 text-gray-600 whitespace-nowrap">
                     ${order.totalPrice}
                   </td>
 
@@ -93,7 +100,7 @@ const OrderManager = () => {
                       onChange={(e) =>
                         handleStatusChange(order._id, e.target.value)
                       }
-                      className="border border-gray-300 rounded-md px-3 py-2 text-sm bg-white shadow-sm focus:outline-none"
+                      className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm bg-white shadow-sm focus:outline-none"
                     >
                       {ORDER_STATUSES.map((status) => (
                         <option key={status} value={status}>
@@ -103,7 +110,7 @@ const OrderManager = () => {
                     </select>
                   </td>
 
-                  <td className="px-6 py-5">
+                  <td className="px-6 py-5 whitespace-nowrap">
                     <button
                       type="button"
                       onClick={() => handleDeleteOrder(order._id)}
