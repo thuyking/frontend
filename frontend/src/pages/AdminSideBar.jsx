@@ -66,8 +66,6 @@ const AdminSideBar = () => {
               : "text-gray-300 hover:bg-gray-700 hover:text-white py-3 px-4 rounded flex items-center space-x-3"
           }
         >
-          <FiHome />
-          <span>Shop</span>
         </NavLink>
       </nav>
 
