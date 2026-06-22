@@ -62,7 +62,6 @@ const OrderManager = () => {
           <thead className="bg-gray-100 text-gray-600 text-sm uppercase">
             <tr>
               <th className="text-left px-6 py-4">Order Id</th>
-              <th className="text-left px-6 py-4">Customer</th>
               <th className="text-left px-6 py-4">Total Price</th>
               <th className="text-left px-6 py-4">Status</th>
               <th className="text-left px-6 py-4">Actions</th>
