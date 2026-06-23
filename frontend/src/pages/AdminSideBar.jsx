@@ -1,12 +1,14 @@
 
 import { FiUser, FiBox, FiShoppingCart, FiHome } from "react-icons/fi";
 import { Link, NavLink, useNavigate } from "react-router-dom";
+import { clearAuth } from "../lib/authStorage";
 
 const AdminSideBar = () => {
   const navigate = useNavigate();
 
   function LogOut() {
-    navigate("/order");
+    clearAuth();
+    navigate("/login");
   }
 
   return (
